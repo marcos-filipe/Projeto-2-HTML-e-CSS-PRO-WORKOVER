@@ -35,7 +35,8 @@ img{
 }
 
 .container{
-	width: 960px;
+	width: 100%;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
@@ -49,6 +50,7 @@ img{
 .header-logo{
 	float: left;
 	position: relative;
+	margin: 0 2%;
 }
 
 .header-logo::after{
@@ -100,6 +102,73 @@ img{
 }
 
 
+/********/
+
+
+.img-mobile{
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin: 0 2%;
+	display: none;
+	cursor: pointer;
+}
+
+.img-mobile img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.header > .container{
+	position: relative;
+}
+
+.menu-mobile{
+	width: 100%;
+	height: 371vh;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: -50px;
+	z-index: 4;
+	display: none;
+}
+
+
+
+.menu-mobile ul{
+	float: right;
+	position: absolute;
+	top: 150px;
+	right: 20px;
+}
+
+
+.menu-mobile ul li{
+	padding-bottom: 20px;
+	list-style: disc;
+	color: white;
+}
+
+.menu-mobile ul li a{
+	font-size: 21px;
+}
+
+.menu-mobile p{
+	color: white;
+	margin-left: -15px;
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
+
+}
+
+
+.img-mobile:hover + .menu-mobile{
+	display: block;
+}
+
+
 /*HEADLINE
 ****************************************************/
 .headline{
@@ -112,12 +181,14 @@ img{
 	color: #579add;
 	font-weight: normal;
 	padding-bottom: 10px;
+	margin: 0 2%;
 }
 
 .headline p{
 	font-size: 30px;
 	color: white;
 	padding-bottom: 15px;
+	margin: 0 2%;
 }
 
 .headline button{
@@ -144,6 +215,7 @@ img{
 	color: #579add;
 	border-bottom: 4px solid #ccc;
 	margin-bottom: 10px;
+	margin: 0 2% 10px 2%;
 }
 
 .tecnology span{
@@ -153,13 +225,13 @@ img{
 
 .tecnology-col{
 	width: 30.66%;
-	margin-right: 4%;
 	float: left;
 	padding-top: 20px;
+	margin: 0 1.2%;
 }
 
 .tecnology-col:last-child{
-	margin-right: 0;
+	
 }
 
 .tecnology-col h2{
@@ -221,17 +293,21 @@ img{
 
 .contact p input:last-child{
 	margin-left: 10px;
+	margin-right: 12px;
 	background-color: green;
 }
 
 .contact-col{
 	width: 47.5%;
 	float: left;
-	margin-right: 5%;
+	
+	margin-right: 4%;
+
 }
 
 .contact-col:nth-of-type(2){
 	margin-right: 0;
+
 }
 
 .contact-col label input{
@@ -269,16 +345,119 @@ img{
 	color: white;
 }
 
-.foot footer p{
+.footer-text p{
 	float: left;
+	margin: 0 2%;
 }
 
-.foot footer ul{
+.menu-footer ul{
 	float: right;
 	margin-top: 10px;
 }
 
-.foot footer ul li{
+.menu-footer ul li{
 	display: inline-block;
 	margin-right: 10px;
+}
+
+
+
+
+/*MEDIA QUERIES
+****************************************************/
+
+@media screen and (max-width: 1024px){
+	
+	.contact-col{
+		float: none;
+		text-align: left;
+	}
+
+	
+
+	.contact > .container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.contact-col label textarea{
+		width: 100%;
+		
+	}
+
+	.contact-col:nth-of-type(1){
+		margin-bottom: 20px;
+	}
+
+	.contact-col:nth-of-type(2){
+		margin-left: -40px;
+	}
+
+}
+
+
+@media screen and (max-width: 900px){
+	.header-menu{
+		display: none;
+	}
+
+	.img-mobile{
+		display: block;
+	}
+
+	.contact-col label textarea{
+	width: 100%;
+}
+
+	.menu-footer{
+		display: none;
+}
+
+	.footer-text{
+		text-align: center;
+	}
+
+	.footer-text p{
+		float: none;
+	}
+
+}
+
+
+@media screen and (max-width: 768px){
+	
+	.tecnology-col{
+		width: 50%;
+		float: none;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		margin: 0 auto;
+ 	}
+
+ 	.contact-col:nth-of-type(2){
+		margin-left: -30px;
+	}
+
+}
+
+
+@media screen and (max-width: 500px){
+	
+	
+ 	.contact-col:nth-of-type(2){
+		margin-left: -20px;
+	}
+
+}
+
+
+@media screen and (max-width: 375px){
+	
+	
+ 	.contact-col:nth-of-type(2){
+		margin-left: -10px;
+	}
+
 }
